@@ -54,6 +54,12 @@ body {
   background: linear-gradient(#D43333, #FF0000);
 }
 
+.teacher-label {
+  background: radial-gradient(61.3% 66.78% at 50% 104.95%, rgba(255, 211, 162, 0.2) 0%, rgba(254, 255, 211, 0.01) 100%),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03));
+}
+
 .telegram-radial {
   background-image: radial-gradient(#1F6588, #279FDB);
 }
@@ -70,7 +76,7 @@ body {
 
 @media only screen and (max-width: 1024px) {
   body, .bg-telegram {
-    background-position: top center;
+    background-position: bottom center;
     background-size: cover;
     background-attachment: fixed;
     background-image: url("../img/bg_mobile@1x.jpg");
@@ -80,7 +86,7 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   @media only screen and (max-width: 1024px) {
     body, .bg-telegram {
-      background-position: top center;
+      background-position: bottom center;
       background-size: cover;
       background-attachment: fixed;
       background-image: url("../img/bg_mobile@2x.jpg");
