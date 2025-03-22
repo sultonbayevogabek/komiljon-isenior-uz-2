@@ -1,6 +1,5 @@
 'use strict';
 
-// Index page
 try {
   const phone = document.getElementById("phone");
   const allowedKeys = [
@@ -34,15 +33,19 @@ try {
     e.target.value = result;
   })
 
+  const statistics = new Statistics();
+
   const registerButtons = document.querySelectorAll('[data-main-button]');
   const modalBackdrop = document.querySelector('[data-modal-backdrop]');
   const modalCloserElements = document.querySelectorAll('[data-modal-close]');
   const form = document.querySelector('[data-form]');
   const formAlert = document.querySelector('[data-form-alert]');
 
-  registerButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      modalBackdrop.classList.remove('hidden')
+  registerButtons.forEach(async button => {
+    button.addEventListener('click', async () => {
+      console.log('click')
+      modalBackdrop.classList.remove('hidden');
+      await statistics.onClickRegBtn();
     })
   })
 
@@ -87,6 +90,8 @@ try {
       submitButton.setAttribute('disabled', true);
       submitButton.textContent = 'Yuborilmoqda...'
 
+      await statistics.onSubmitForm();
+
       localStorage.setItem('user', JSON.stringify({
         name, phone: '+998' + phone, time: new Date().toLocaleString()
       }))
@@ -94,7 +99,7 @@ try {
       submitButton.removeAttribute('disabled');
       submitButton.textContent = "Ro'yxatdan o'tish";
       closeModal();
-      window.location.href = `../telegram.html`
+      window.location.href = `./telegram.html`
     }
   })
 } catch (e) {
