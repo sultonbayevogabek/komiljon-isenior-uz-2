@@ -5,9 +5,7 @@
 
   const joinButton = document.querySelector('#joinToChannel')
   joinButton?.addEventListener('click', async (e) => {
-    joinButton.disabled = true;
-    joinButton.disabled = false;
-    window.location.href = 'https://t.me/+kWXjOxTNoXcwZGZi';
+    window.location.href = 'https://t.me/+gNGqJioywn4zYzli';
   })
 
   if (user && user?.name && user?.phone && user?.time) {
@@ -19,7 +17,7 @@
     formData.append(`Foydalanuvchi ID`, statistics.userId);
     formData.append(`Timestamp`, statistics.time?.toString());
 
-    let response = await fetch('https://script.google.com/macros/s/AKfycbw1lUCW-ZvGpZTDl-QBsp1mKegF_RjlqS1EZEpr8KzSqrOGG9MSjdG5z0PMorVP1-Z8Dw/exec', {
+    let response = await fetch('https://script.google.com/macros/s/AKfycbyV2b_CW3DwoJK9u-IYRjewq1K-WPyi8uW2nHTfVX2_lIoVi3xFilbJa79qDHV5A13p/exec', {
       method: 'POST',
       body: formData
     })
